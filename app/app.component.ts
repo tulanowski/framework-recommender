@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import {FrameworksGrid} from "./frameworks-grid.component";
-// import {QuestionsList} from "./questions-list.component";
+import {FrameworksChart} from "./frameworks-chart.component";
 
 @Component({
     selector: 'my-app',
@@ -14,6 +14,7 @@ import {FrameworksGrid} from "./frameworks-grid.component";
         <router-outlet></router-outlet>
     `,
     directives: [ROUTER_DIRECTIVES],
+    precompile: [FrameworksGrid, FrameworksChart]
 })
 
 export class AppComponent {
